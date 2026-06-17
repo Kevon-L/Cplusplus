@@ -1,6 +1,7 @@
 // Copyright 2026 KeVon Lindsey
 
 #include<iostream>
+#include <cstdlib>
 #include <termios.h>
 #include <unistd.h>
 #include <fcntl.h>
@@ -147,6 +148,15 @@ void Logic() {
         break;
     default:
         break;
+    }
+
+    if (x >= width || x < 0 || y >= height || y < 0)
+        gameOver = true;
+
+    if (x == fruitX && y == fruitY) {
+        score += 10;
+        fruitX = rand() % width;
+        fruitY = rand() % height;
     }
 }
 
