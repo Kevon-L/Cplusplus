@@ -13,21 +13,27 @@ int main() {
 
   cout << "I'll calculate the space between two dates. Enter your starting month." << endl;
   cin >> month1;
+  cout << endl;
 
   cout << "Enter your starting day." << endl;
   cin >> day1;
+  cout << endl;
 
   cout << "Enter your starting year" << endl;
   cin >> year1;
+  cout << endl;
 
   cout << "Enter your ending month" << endl;
   cin >> month2;
+  cout << endl;
   
   cout << "Enter your ending day" << endl;
   cin >> day2;
+  cout << endl;
   
   cout << "Enter your ending year" << endl;
   cin >> year2;
+  cout << endl;
 
   start_month = month1;
   start_day = day1;
