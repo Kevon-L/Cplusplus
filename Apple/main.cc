@@ -21,7 +21,9 @@ int main() {
     cout << "Creating another apple..." << endl;
     Apple two;
 
-    cout << "Setting the new apple's values to the following, valid values:" << endl;
+    cout << "Setting the new apple's values to the following, valid values:"
+    << endl;
+
     cout << "Granny Smith 0.75 0.99\n" << endl;
     two.setType("Granny Smith");
     two.setWeight(0.75);
@@ -33,16 +35,22 @@ int main() {
     cout << "Creating another default apple..." << endl;
     Apple three;
 
-    cout << "Setting the apple's values to the following, invalid values:" << endl;
+    cout << "Setting the apple's values to the following, invalid values:"
+    << endl;
+
     cout << "iPad 2.5 -200\n" << endl;
     three.setType("iPad");
     three.setWeight(2.5);
     three.setPrice(-200);
 
-    cout << "Printing the newest apple's values which should not have changed from the default values" << endl;
+    cout << "Printing the newest apple's values which should not have changed "
+    << "from the default values" << endl;
+
     cout << three.print() << "\n" << endl;
 
-    cout << "Checking if the first and last apple have the same values." << endl;
+    cout << "Checking if the first and last apple have the same values."
+    << endl;
+
     cout << (one.Equals(three) ? "True" : "False") << endl;
 
     return 0;

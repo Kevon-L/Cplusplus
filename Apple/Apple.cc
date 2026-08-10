@@ -12,15 +12,16 @@ using std::string;
         if ( type == "Red Delicious" || type == "Golden Delicious" ||
              type == "Gala" || type == "Granny Smith" ) {
             this->type = type;
-        } else
+        } else {
             this->type = "Gala";
+        }
 
-        if(weight >= 0 && weight <= 2)
+        if ( weight >= 0 && weight <= 2 )
             this->weight = weight;
         else
             this->weight = 0.0;
-        
-        if(price >= 0)
+
+        if ( price >= 0 )
             this->price = price;
         else
             this->price = 0.0;
@@ -34,8 +35,9 @@ using std::string;
         if ( type == "Red Delicious" || type == "Golden Delicious" ||
              type == "Gala" || type == "Granny Smith" ) {
             this->type = type;
-        } else
+        } else {
             this->type = "Gala";
+        }
     }
 
     double Apple::getWeight() const {
@@ -43,7 +45,7 @@ using std::string;
     }
 
     void Apple::setWeight(double weight) {
-        if(weight >= 0 && weight <= 2)
+        if ( weight >= 0 && weight <= 2 )
             this->weight = weight;
         else
             this->weight = 0.0;
@@ -54,7 +56,7 @@ using std::string;
     }
 
     void Apple::setPrice(double price) {
-        if(price >= 0)
+        if ( price >= 0 )
             this->price = price;
         else
             this->price = 0.0;
@@ -66,5 +68,6 @@ using std::string;
     }
 
     string Apple::print() {
-        return "Type: " + type + " Weight: " + std::to_string(weight) + " Price: " + std::to_string(price);
+        return "Type: " + type + " Weight: " + std::to_string(weight) +
+               " Price: " + std::to_string(price);
     }
