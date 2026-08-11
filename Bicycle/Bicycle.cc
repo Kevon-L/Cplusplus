@@ -15,7 +15,7 @@ class Bicycle {
       if ( make != NULL )
          this->make = make;
       else
-         make = "none";
+         this->make = "none";
     }
 
     string Bicycle::getMake() const { return make; }
@@ -24,7 +24,7 @@ class Bicycle {
       if ( make != NULL )
          this->make = make;
       else
-         make = "none";
+         this->make = "none";
     }
 
     Wheel Bicycle::getFrontWheel() const { return fWheel; }
@@ -40,9 +40,8 @@ class Bicycle {
     void Bicycle::setFrame(Frame frame) { this->frame = frame; }
 
     bool Bicycle::Equals(const Bicycle &bicycle) const {
-      return this->make == bicycle.getMake() && this->fWheel ==
-             bicycle.getFrontWheel() && this->bWheel == this->getBackWheel() &&
-             this->frame == bicycle.getFrame();
+      return make == bicycle.getMake() && fWheel == bicycle.getFrontWheel() &&
+             bWheel == bicycle.getBackWheel() && frame == bicycle.getFrame();
     }
 
     string Bicycle::toString() {
