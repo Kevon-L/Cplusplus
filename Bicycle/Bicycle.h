@@ -32,6 +32,8 @@ class Bicycle {
 
     bool Equals(const Bicycle &bicycle) const;
 
+    string toString();
+
  private:
     string make;
     Wheel fWheel;

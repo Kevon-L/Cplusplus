@@ -8,31 +8,37 @@ using std::string;
 
 class Bicycle {
  public:
-    Bicycle() : make("none"), fWheel(), bWheel(), frame() {}
+    Bicycle::Bicycle() : make("none"), fWheel(), bWheel(), frame() {}
 
-    Bicycle(string make, Wheel fWheel, Wheel bWheel, Frame frame)
+    Bicycle::Bicycle(string make, Wheel fWheel, Wheel bWheel, Frame frame)
             : make(make), fWheel(fWheel), bWheel(bWheel), frame(frame) {}
 
-    string getMake() const { return make; }
+    string Bicycle::getMake() const { return make; }
 
-    void setMake(string make) { this->make = make; }
+    void Bicycle::setMake(string make) { this->make = make; }
 
-    Wheel getFrontWheel() const { return fWheel; }
+    Wheel Bicycle::getFrontWheel() const { return fWheel; }
 
-    void setFrontWheel(Wheel fWheel) { this->fWheel = fWheel; }
+    void Bicycle::setFrontWheel(Wheel fWheel) { this->fWheel = fWheel; }
 
-    Wheel getBackWheel() const { return bWheel; }
+    Wheel Bicycle::getBackWheel() const { return bWheel; }
 
-    void setBackWheel(Wheel bWheel) { this->bWheel = bWheel; }
+    void Bicycle::setBackWheel(Wheel bWheel) { this->bWheel = bWheel; }
 
-    Frame getFrame() const { return frame; }
+    Frame Bicycle::getFrame() const { return frame; }
 
-    void setFrame(Frame frame) { this->frame = frame; }
+    void Bicycle::setFrame(Frame frame) { this->frame = frame; }
 
-    bool Equals(const Bicycle &bicycle) const {
+    bool Bicycle::Equals(const Bicycle &bicycle) const {
       return this->make == bicycle.getMake() && this->fWheel ==
              bicycle.getFrontWheel() && this->bWheel == this->getBackWheel() &&
              this->frame == bicycle.getFrame();
+    }
+
+    string Bicycle::toString() {
+        return "[Bicycle] Make: " + make + " Front Wheel: " + fWheel.toString()
+                + " Back Wheel: " + bWheel.toString() + " Frame: "
+                + frame.toString;
     }
 
  private:
