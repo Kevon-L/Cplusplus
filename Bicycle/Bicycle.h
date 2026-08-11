@@ -14,23 +14,23 @@ class Bicycle {
 
     Bicycle(string make, Wheel fWheel, Wheel bWheel, Frame frame);
 
-   string getMake() const;
+    string getMake() const;
 
-   void setMake(string make);
+    void setMake(string make);
 
-   Wheel getFrontWheel() const;
+    Wheel getFrontWheel() const;
 
-   void setFrontWheel(Wheel fWheel);
+    void setFrontWheel(Wheel fWheel);
 
-   Wheel getBackWheel() const;
+    Wheel getBackWheel() const;
 
-   void setBackWheel(Wheel bWheel);
+    void setBackWheel(Wheel bWheel);
 
-   Frame getFrame() const;
+    Frame getFrame() const;
 
-   Frame setFrame(Frame frame);
+    Frame setFrame(Frame frame);
 
-   bool Equals(const Bicycle &bicycle) const;
+    bool Equals(const Bicycle &bicycle) const;
 
  private:
     string make;
