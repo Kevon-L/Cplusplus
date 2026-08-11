@@ -1,22 +1,21 @@
 // Copyright 2026 KeVon Lindsey
 
-#ifndef BICYCLE_BICYCLE_H_
-#define BICYCLE_BICYCLE_H_
-
 #include<iostream>
 #include<string>
+#include"Bicycle.h"
 
 using std::string;
 
 class Bicycle {
  public:
-    Bicycle();
+    Bicycle() : make("none"), fWheel(), bWheel(), frame() {}
 
-    Bicycle(string make, Wheel fWheel, Wheel bWheel, Frame frame);
+    Bicycle(string make, Wheel fWheel, Wheel bWheel, Frame frame)
+            : make(make), fWheel(fWheel), bWheel(bWheel), frame(frame) {}
 
-   string getMake() const;
+   string getMake() const {return make;}
 
-   void setMake(string make);
+   void setMake(string make) {this->make = make;}
 
    Wheel getFrontWheel() const;
 
@@ -28,7 +27,7 @@ class Bicycle {
 
    Frame getFrame() const;
 
-   Frame setFrame(Frame frame);
+   void setFrame(Frame frame);
 
    bool Equals(const Bicycle &bicycle) const;
 
@@ -38,4 +37,3 @@ class Bicycle {
     Wheel bWheel;
     Frame frame;
 };
-#endif  // BICYCLE_BICYCLE_H_
