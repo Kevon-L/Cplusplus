@@ -11,11 +11,21 @@ class Bicycle {
     Bicycle::Bicycle() : make("none"), fWheel(), bWheel(), frame() {}
 
     Bicycle::Bicycle(string make, Wheel fWheel, Wheel bWheel, Frame frame)
-            : make(make), fWheel(fWheel), bWheel(bWheel), frame(frame) {}
+            : fWheel(fWheel), bWheel(bWheel), frame(frame) {
+      if ( make != NULL )
+         this->make = make;
+      else
+         make = "none";
+    }
 
     string Bicycle::getMake() const { return make; }
 
-    void Bicycle::setMake(string make) { this->make = make; }
+    void Bicycle::setMake(string make) {
+      if ( make != NULL )
+         this->make = make;
+      else
+         make = "none";
+    }
 
     Wheel Bicycle::getFrontWheel() const { return fWheel; }
 
