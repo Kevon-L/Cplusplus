@@ -14,13 +14,13 @@ class Frame {
         if ( 18.5 <= size && size <= 60 )
             this->size = size;
         else
-            size = 18.5;
+            this->size = 18.5;
 
         if ( type == "Diamond" || type == "Step-Through" || type == "Truss" ||
              type == "Penny-Farthing" )
             this->type = type;
         else
-            type = "Diamond";
+            this->type = "Diamond";
     }
 
     double Frame::getSize() const { return size; }
@@ -29,7 +29,7 @@ class Frame {
         if ( 18.5 <= size && size <= 60 )
             this->size = size;
         else
-            size = 18.5;
+            this->size = 18.5;
     }
 
     string Frame::getType() const { return type; }
@@ -39,7 +39,7 @@ class Frame {
              type == "Penny-Farthing" )
             this->type = type;
         else
-            type = "Diamond";
+            this->type = "Diamond";
     }
 
     bool Frame::Equals(const Frame &frame) const {
