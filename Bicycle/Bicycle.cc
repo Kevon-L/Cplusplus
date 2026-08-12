@@ -10,7 +10,7 @@ Bicycle::Bicycle() : make("none"), fWheel(), bWheel(), frame() {}
 
 Bicycle::Bicycle(string make, Wheel fWheel, Wheel bWheel, Frame frame)
                  : fWheel(fWheel), bWheel(bWheel), frame(frame) {
-    if ( make != NULL )
+    if ( !make.empty() )
       this->make = make;
     else
       this->make = "none";
@@ -19,7 +19,7 @@ Bicycle::Bicycle(string make, Wheel fWheel, Wheel bWheel, Frame frame)
 string Bicycle::getMake() const { return make; }
 
 void Bicycle::setMake(string make) {
-    if ( make != NULL )
+    if ( !make.empty() )
       this->make = make;
     else
       this->make = "none";
