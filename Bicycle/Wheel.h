@@ -20,7 +20,7 @@ class Wheel {
 
     double getWidth();
 
-    double setWidth(double width);
+    void setWidth(double width);
 
     bool Equals(const Wheel &wheel) const;
 

@@ -31,7 +31,7 @@ void Wheel::setDiameter(double diameter) {
 
 double Wheel::getWidth() { return width; }
 
-double Wheel::setWidth(double width) {
+void Wheel::setWidth(double width) {
     if ( 1 <= width && width <= 2.5 )
         this->width = width;
     else
