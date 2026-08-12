@@ -5,6 +5,8 @@
 
 #include<iostream>
 #include<string>
+#include"Wheel.h"
+#include"Frame.h"
 
 using std::string;
 

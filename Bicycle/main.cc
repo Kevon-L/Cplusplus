@@ -3,8 +3,6 @@
 #include <iostream>
 #include <string>
 #include"Bicycle.h"
-#include"Frame.h"
-#include"Wheel.h"
 
 using std::cin;
 using std::cout;
