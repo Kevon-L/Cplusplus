@@ -30,7 +30,7 @@ class Bicycle {
 
     Frame getFrame() const;
 
-    Frame setFrame(Frame frame);
+    void setFrame(Frame frame);
 
     bool Equals(const Bicycle &bicycle) const;
 
