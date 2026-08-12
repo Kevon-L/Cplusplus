@@ -45,5 +45,5 @@ bool Frame::Equals(const Frame &frame) const {
 }
 
 string Frame::toString() {
-    return "[Frame] Size: " + to_string(size) + " Type: " + type;
+    return "[Frame] Size: " + std::to_string(size) + " Type: " + type;
 }

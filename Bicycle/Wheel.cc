@@ -43,5 +43,5 @@ bool Wheel::Equals(const Wheel &wheel) const {
 }
 
 string Wheel::toString() {
-    return "[Wheel] Diameter: " + to_string(diameter) + " Width: " + width;
+    return "[Wheel] Diameter: " + std::to_string(diameter) + " Width: " + std::to_string(width);
 }
