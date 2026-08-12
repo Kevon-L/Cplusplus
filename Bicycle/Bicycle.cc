@@ -38,12 +38,12 @@ Frame Bicycle::getFrame() const { return frame; }
 void Bicycle::setFrame(Frame frame) { this->frame = frame; }
 
 bool Bicycle::Equals(const Bicycle &bicycle) const {
-    return make == bicycle.getMake() && fWheel == bicycle.getFrontWheel() &&
-           bWheel == bicycle.getBackWheel() && frame == bicycle.getFrame();
+    return make == bicycle.getMake() && fWheel.Equals(bicycle.getFrontWheel()) &&
+           bWheel.Equals(bicycle.getBackWheel()) && frame.Equals(bicycle.getFrame());
 }
 
 string Bicycle::toString() {
     return "[Bicycle] Make: " + make + " Front Wheel: " + fWheel.toString()
            + " Back Wheel: " + bWheel.toString() + " Frame: "
-           + frame.toString;
+           + frame.toString();
 }
