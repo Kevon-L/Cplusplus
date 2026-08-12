@@ -20,7 +20,7 @@ Wheel::Wheel(double diameter, double width) {
         this->width = 1;
 }
 
-double Wheel::getDiameter() { return diameter; }
+double Wheel::getDiameter() const { return diameter; }
 
 void Wheel::setDiameter(double diameter) {
     if ( 16 <= diameter && diameter <= 55 )
@@ -29,7 +29,7 @@ void Wheel::setDiameter(double diameter) {
         this->diameter = 16;
 }
 
-double Wheel::getWidth() { return width; }
+double Wheel::getWidth() const { return width; }
 
 void Wheel::setWidth(double width) {
     if ( 1 <= width && width <= 2.5 )
@@ -43,5 +43,5 @@ bool Wheel::Equals(const Wheel &wheel) const {
 }
 
 string Wheel::toString() {
-    return "[Wheel] Diameter: " + diameter + " Width: " + width;
+    return "[Wheel] Diameter: " + to_string(diameter) + " Width: " + width;
 }

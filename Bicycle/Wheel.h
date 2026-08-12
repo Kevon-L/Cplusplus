@@ -14,11 +14,11 @@ class Wheel {
 
     Wheel(double diameter, double width);
 
-    double getDiameter();
+    double getDiameter() const;
 
     void setDiameter(double diameter);
 
-    double getWidth();
+    double getWidth() const;
 
     void setWidth(double width);
 
