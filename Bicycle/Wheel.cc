@@ -2,6 +2,7 @@
 
 #include<iostream>
 #include<string>
+#include"Wheel.h"
 
 using std::string;
 
@@ -32,11 +33,20 @@ class Wheel {
 
     double Wheel::getWidth() { return width; }
 
-    double Wheel::setWidth(double width);
+    double Wheel::setWidth(double width) {
+        if ( 1 <= width && width <= 2.5 )
+            this->width = width;
+        else
+            this->width = 1;
+    }
 
-    bool Wheel::Equals(const Wheel &wheel) const;
+    bool Wheel::Equals(const Wheel &wheel) const {
+        return diameter == wheel.getDiameter() && width == wheel.getWidth();
+    }
 
-    string Wheel::toString();
+    string Wheel::toString() {
+        return "[Wheel] Diameter: " + diameter + " Width: " + width;
+    }
 
  private:
     double diameter;
