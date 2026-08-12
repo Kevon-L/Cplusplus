@@ -35,7 +35,7 @@ int main()
 
     // Param Bike
     cout << "\nCreating another bike using the parameterized constructor" << endl;
-    Bicycle b02 = Bicycle("Big Wheel", Wheel(55.0, 2.5), Wheel(18.0, 2.0), Frame(60.0, "Penny-Farthing"));
+    Bicycle b02("Big Wheel", Wheel(55.0, 2.5), Wheel(18.0, 2.0), Frame(60.0, "Penny-Farthing"));
     cout << b02.toString() << endl;
 
     cout << "\nCreating another bike using the parameterized constructor with invalid values" << endl;
